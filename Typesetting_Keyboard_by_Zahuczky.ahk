@@ -124,7 +124,7 @@ s::
 d::
 f::
 g::
-h::
+h::^!h
 j::
 K::
 l::
@@ -140,8 +140,8 @@ x::
 c::
 v::Send, ^g{Tab 55}\bord4{Enter}
 b::Send, ^g{Tab 55}\blur0.8{Enter}
-n::
-m::
+n::Send, !n
+m::Send, !m
 ,::
 .::
 /::tooltip, [F23]  %A_thishotKey%
@@ -238,7 +238,7 @@ right::tooltip,[F23] %A_thishotKey%
 numpad0::run, C:\Users\zozic\OneDrive - Kormányzati Informatikai Fejlesztési Ügynökség\Dokumentumok\Aegisub9214\Aegisub9214.exe, C:\Users\zozic\OneDrive - Kormányzati Informatikai Fejlesztési Ügynökség\Dokumentumok\Aegisub9214
 numpad1::Send, !f{Down 8}{Right}
 numpad2::run, C:\Program Files\Blender Foundation\Blender 3.0\blender-launcher.exe, C:\Program Files\Blender Foundation\Blender 3.0
-numpad3::
+numpad3::run, C:\Program Files\BorisFX\Mocha Pro 2022\bin\mochapro.exe, C:\Program Files\BorisFX\Mocha Pro 2022\bin\mochapro.exe
 numpad4::
 numpad5::
 numpad6::
