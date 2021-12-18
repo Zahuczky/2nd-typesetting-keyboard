@@ -1,4 +1,6 @@
 --------------------------------------------------------------------
+IMPORTANT: This repo is under construction. Right now a lot of the stuff uploaded here isn't in a proper working order, or isn't as complete as the readme might imply. Keep that in mind.
+--------------------------------------------------------------------
 # This fork only includes the Interception method from [TaranVH's original repository](https://github.com/TaranVH/2nd-keyboard), for the sake of creating a secondary [Aegisub](https://github.com/Ristellise/AegisubDC) typesetting keyboard.
 --------------------------------------------------------------------
 ## TaranVH's install steps for interception, intercept, and AutoHotKey:
