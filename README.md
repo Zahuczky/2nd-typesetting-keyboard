@@ -1,127 +1,122 @@
-# 2nd-keyboard
-ALL of Taran's scripts - (not just for the 2nd keyboard.)
+--------------------------------------------------------------------
+# TaranVH's install steps for interception, intercept, and AutoHotKey:
+--------------------------------------------------------------------
+### VIDEO TUTORIAL THAT EXPLAINS ALL THIS IN GREATER DETAIL:
+https://www.youtube.com/watch?v=y3e_ri-vOIo
 
-IF YOU ARE NEW TO AUTOHOTKEY, AND WANT TO USE IT FOR VIDEO EDITING, START BY WATCHING THIS FULLY COMPREHENSIVE TUTORIAL VIDEO I MADE:
-https://www.youtube.com/watch?v=T3vG8U5RoFw
-
-------------
-
-I'm the main video editor for Linus Media Group. We put out multiple videos every day, so I had to learn how to work quickly, without sacrificing quality.
-These AutoHotKey scripts speed up my workflow significantly. (Mostly for Premiere Pro and Explorer)
-
-I pioneered the use of a 2nd keyboard purely for macros, and later, the concept of "wrapping" keystrokes inside of other keystrokes, (ideally, the super-function keys (F13-F24)) as a means of massively multiplying the number of unique available keys.
-
-------------
-
-Adding a 2nd, independent keyboard is remarkably difficult, as Windows has no native support for distinguishing between multiple keyboards. There are many possible solutions, which vary greatly in difficulty, functionality, stability, and price. Here's a spreadsheet that breaks it all down for you. My preferred solution (QMK) might not be best for you:
-
-https://docs.google.com/spreadsheets/d/18e6-OlUzc_1wbGvm9zqMOwtC4oysm6C7XMU1bOf8Nrc/edit?usp=sharing
+### DOWNLOADING INTERCEPTION:
+- Navigate to this page:
+- https://github.com/oblitum/Interception
+- Click on "download the latest release."
+- Click on Interception.zip to download it.
+- Unzip the file to some location on your computer.
 
 
-#### So, to summarize, if you want to make your own macro keyboard, these are all the methods that I know of:
-- Luamacros (unstable/buggy, no longer recommended) https://youtu.be/Arn8ExQ2Gjg
-- Interception https://youtu.be/y3e_ri-vOIo and https://youtu.be/Hn18vv--sFY
-- iCue (K55) https://youtu.be/cQ2atofn3lE
-- Razer Synapse (Cyonosa Chroma) https://youtu.be/GttedCcyxa4
-- QMK (Hasu USB converter, my current solution.) https://youtu.be/GZEoss4XIgc
+### INSTALLING INTERCEPTION (tricky):
+- Navigate to the folder location of "install-interception.exe" in Windows File Explorer.
+- Copy the address from the address bar.
+- Open the start menu, and type in <kbd>C</kbd><kbd>M</kbd><kbd>D</kbd>. DO NOT hit "ENTER."
+- Instead, <kbd>right click</kbd> on the command prompt item that appeared in your start menu, and <kbd>click</kbd> on "Run as administrator"
+- Now inside the admin command prompt, type in "<kbd>c</kbd><kbd>d</kbd><kbd>[spacebar]</kbd>" and hit <kbd>CTRL</kbd> <kbd>V</kbd> to paste the explorer address. For me, I had to type in the following:
+```cmd
+cd C:\Users\Taran Baron\Downloads\Interception\command line installer
+```
+- Hit <kbd>ENTER</kbd>
+- Now, type in the following line of text exactly as shown:
+```
+install-interception.exe /install
+```
+- ...and hit <kbd>ENTER</kbd>
+- Once the program installs sucessfully, you still must restart your computer in order to complete the installation.
+
+- (If you ever want to UNinstall interception, watch this): https://www.youtube.com/watch?v=Hn18vv--sFY
+
+### USING INTERCEPT.EXE -- (This is different from intercepTION!)
+- Download Kamaz's intercept.exe zip from here:
+- http://octopup.org/img/code/interception/intercept.zip
+	(If it's no longer available from that location, I've already rehosted it in this folder.)
+- Unzip intercept.zip to some location on your computer.
+- Plug in your second keyboard and ensure that it is working normally.
+- Double click on intercept.exe. It will open a command prompt thingy.
+- Type <kbd>a</kbd> to add a key.
+- On the SECONDARY keyboard, press the <kbd>Q</kbd> key once.
+- You will be prompted with "Enter combo for this trigger, end with ESC."
+- Carefully execute the following keystrokes (it doesn't matter which keyboard):
+
+<kbd>F12 down</kbd>
+<kbd>Q down</kbd>
+<kbd>Q up</kbd>
+<kbd>F12 up</kbd>
+<kbd>ESC</kbd>
+
+- Now press <kbd>Q</kbd> again to label the script
+- Press <kbd>ENTER</kbd> to accept this label.
+- Press <kbd>S</kbd> to save the filter, or <kbd>C</kbd> to cancel if you made a mistake.
+- This has the effect of basically "wrapping" the keystroke inside of another keystroke.
+- Now repeat the above steps, but using the keys <kbd>W</kbd>, <kbd>E</kbd>, and <kbd>R</kbd>.
+- If you make a mistake, you can always just open the .ini file in a text editor and delete any bad entries.
 
 
-#### Other potential methods that I have not personally tested
-- MacroMyKBD https://github.com/lal12/macroMyKBD
-- 2key, which uses a Raspberry Pi https://github.com/Gum-Joe/2Keys/blob/v0.3.5/docs/SETUP.md
-- An alternative to the Hasu USB converter: https://github.com/oschwartz10612/Scanner-Pro-MK3
-- An alternative to LuaMacros:
-https://github.com/VollRahm/NotEnoughHotkeys/
-- Mulitkeyboard https://mediachance.com/multikeyboard/ apparently has many problems. More info: https://twitter.com/iamnottani/status/1271530470052974595 and https://twitter.com/weirdoyt/status/1257282783044493312
+### CREATING THE AUTOHOTKEY SCRIPT
+- Download and install autohotkey if you don't have it:
+- https://autohotkey.com/
+- Right click on the desktop and select "New" > "AutoHotKey Script"
+- Name the file "baby's first extra keyboard.ahk"
+- Right click on the file and choose "Open with" > "Notepad". (Or, use your text editor of choice. Do not use Word.)
+- In that file, there will already be a few lines of code. Beneath them, insert the following lines of code, up to the #if:
+```
+#SingleInstance force
+#if (getKeyState("F12", "P"))
+F12::return
+q::msgbox, you pressed Q on the extra keyboard
+w::msgbox, you pressed %A_thishotkey% on the extra keyboard
+e::tooltip, you pressed %A_thishotkey% on the extra keyboard
+r::SoundBeep, 1000, 500
+#if
+;Done with F12
+```
+- Now save the file. ("baby's first extra keyboard.ahk")
+- Double click on the file to get it running.
 
 
+### PUTTING IT ALL TOGETHER:
 
-If all of this just seems like a huge PITA, just buy a Stream Deck instead: https://youtu.be/vhPLhfP1b_s
+- Make sure that Intercept.exe is running, with the filters applied. (press Y to apply them. Do not close the window.)
+- Open a blank text file and type "QWERTY" using your primary keyboard in it to ensure that it works.
+- Now, type Q, W, E, or R on your secondary keyboard. Instead of text, you should recieve message boxes, tooltips, or a beep.
+- Now that you have that working, you can restart intercept.exe, and (A)dd all the remaining keys, using the method described above.
+- HOWEVER, that will be very slow. So instead, you can download and use Taran's files, "keyremap.ini" and "FULL_extra_keyboard.ahk" and customize them to your own computer.
 
-NOTE: You do not need a 2nd keyboard to use AutoHotKey. Most poeple don't. By the time you need to add a 2nd keyboard, you should already be quite familiar with how AutoHotKey works. You can probably use your function keys for AHK macros, and if your main keyboard has dedicated macro keys, you can also use those. (Assign them to obscure shortcuts like CTRL SHIFT ALT F1, and then, in AutoHotKey, assign that key combo to whatever you want.)
 
-Basically, don't just add a 2nd keyboard because you think it's cool! Make sure you actually need it, because you've run out of space on your main keyboard.
+- If you use Taran's keyremap.ini, be sure to "find and replace" all instances of this line:
+```
+device=HID\VID_046D&PID_C31C&REV_6400&MI_00
+```
+...with the device ID of your own secondary keyboard. (Again, you can get this info by (A)dding a filter in intercept.exe.)
 
-## My AHK scripts
+- If you create your own keyremap.ini, you should find and replace all instances of `58,0,` (the scan code for F12) with `6E,0,` (the scan code for F23.) This is simply so that you do not make your F12 key unusable.
+- Also, ensure that your AutoHotKey script is listening for F23 rather than F12, by modifying the code like so:
+```
+#if (getKeyState("F23", "P"))
+F23::return
 
-IF YOU ARE NEW TO AUTOHOTKEY, start here:
-https://autohotkey.com/docs/Tutorial.htm
-https://www.youtube.com/watch?v=T3vG8U5RoFw
+;;; put all your keys here ;;;
 
-I know there's a lot of scripts in this repository. Look here to see what launches when I start my computer:
-https://github.com/TaranVH/2nd-keyboard/blob/master/INFO_and_PROFILES/startup_folder_TARAN_Aug_2018.png
-
-Some of the scripts are #include-d in other scripts. The MAIN script from which most others are run, is this one - so, you can start here: https://github.com/TaranVH/2nd-keyboard/blob/master/ALL_MULTIPLE_KEYBOARD_ASSIGNMENTS.ahk
-
-Some scripts can stand entirely on their own, like this one: https://github.com/TaranVH/2nd-keyboard/blob/master/Taran's_Windows_Mods/Both_Accelerated_Scrolling_1.3_AND_Cursor_click_visualizer.ahk
-
-To see most of these scripts in action during a real workday, check out my "World's Most Advanced Editing Tutorial" https://www.youtube.com/watch?v=O6ERELse_QY
-
-All my custom Premiere, Photoshop, and After Effects keyboard shortcuts can be found here: https://github.com/TaranVH/2nd-keyboard/tree/master/Settings_and_shortcuts
-
-Please note, I'm not a real programmer (in this lifetime.) My organization can be bad, and my code can be spaghetti-y. I have, however, done extensive commenting... so if you know how to code, it should be pretty easy to figure out what's going on.
-
-Help with this repository is appreciated, but don't feel bad if I never officially merge your scripts. I can't trust anything that I haven't fully tested myself, or something with code that I don't recognise or understand. These are my real day-to-day working scripts, so I can't compromise them for anybody. 
-
-Sometimes I put out tutorials on my personal channel: https://www.youtube.com/user/TaranVH/videos ...and sometimes I make "reverse tutorials" where I ask questions instead.
-
-Twitter is probably the most effective method for you to contact me: https://twitter.com/TaranVH
-
-You're free to use any of these scripts for yourself. Take what you need, modify it to your heart's content.
-
-My most used, most useful, simplest script is this one: https://www.youtube.com/watch?v=OqyQABySV8k
-
------
-
-To see all my currently assigned scan codes and virual keys, take a look at this spreadsheet: https://docs.google.com/spreadsheets/d/1GSj0gKDxyWAecB3SIyEZ2ssPETZkkxn67gdIwL1zFUs/edit?usp=drive_web&ouid=107638578296445823789
-
------
-
-As of August 2018, I've changed the root directory from this:
-
-**C:\Users\TaranWORK\Documents\GitHub\2nd-keyboard**
-
-to this:
-
-**C:\AHK\2nd-keyboard**
-
-which is an enormous improvement, since users no longer have to change all the scattered instances of "TaranWORK" to their own username. Now, a huge amount of the scripts are turn-key, as long as you don't move anything or change any file paths.
-
-This also means that the Corsair K95 and Stream Deck direct-launch scripts are ready to go immediately.
-
-The only disadvantage is that these AHK scripts will be available to ALL users on a machine. If you share a computer, you may wish to move them under your user account after all.
-
-Make sure to populate your startup folder with file shortcuts, to launch all the scripts you want as soon as the computer boots up. KEEP IN MIND that there are TWO startup folders - one for your user account, and one for ALL users. Here they are:
-
-*C:\Users\[YOUR_USERNAME]\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup*
-(You can open up this by typing "shell:startup" in the explorer bar.) 
-
-*C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp*
-(You can open up this by typing "shell:Common Startup" in the explorer bar.)
-
----
-
-**Some interesting-looking related repositories**
-
-This is the kind of next-level macro stuff I would do if I was a real programmer:
-https://github.com/sebinside/HotkeylessAHK
-https://github.com/sebinside/AHK2PremiereCEP
-Explanatory video: https://www.twitch.tv/videos/628889342
-
-https://github.com/TaranVH/2nd-keyboard/pull/27 (easier install of Interception)
-
-https://github.com/evilC/AutoHotInterception (also easier, ppl seem to prefer it.)
+#if
+;Done with F23
+```
 
 
 
-After Effects scripts from a guy with 11 years After Effects experience who just discovered AHK:
-https://github.com/ivycomb/AutoAfterEffects
 
+### ADDITIONAL RECOURCES:
+> Kamaz's original post:
 
-More info on how to use Adobe CEP stuff:
+> http://orbiter-forum.com/showthread.php?t=30829
 
-https://www.youtube.com/channel/UCmq_t_-4GLFu_nYaEDDModw/videos
+> geoffff's follow-up post:
 
-https://github.com/Adobe-CEP/Samples/blob/master/PProPanel/jsx/PPRO/Premiere.jsx
+> https://autohotkey.com/boards/viewtopic.php?p=61425&sid=c49c82a1247806ce92836a945aad4b37#p61425
+
 
 

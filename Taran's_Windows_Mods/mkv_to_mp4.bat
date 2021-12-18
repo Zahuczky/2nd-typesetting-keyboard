@@ -1,1 +1,0 @@
-ffmpeg -i "%~1" -map 0 -codec copy "%~dnp1.mp4"
