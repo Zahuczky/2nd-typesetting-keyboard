@@ -1,5 +1,7 @@
 --------------------------------------------------------------------
-# TaranVH's install steps for interception, intercept, and AutoHotKey:
+# This fork only includes the Interception method from [TaranVH's original repository](https://github.com/TaranVH/2nd-keyboard), for the sake of creating a secondary [Aegisub](https://github.com/Ristellise/AegisubDC) typesetting keyboard.
+--------------------------------------------------------------------
+## TaranVH's install steps for interception, intercept, and AutoHotKey:
 --------------------------------------------------------------------
 ### VIDEO TUTORIAL THAT EXPLAINS ALL THIS IN GREATER DETAIL:
 https://www.youtube.com/watch?v=y3e_ri-vOIo
@@ -57,7 +59,7 @@ install-interception.exe /install
 - If you make a mistake, you can always just open the .ini file in a text editor and delete any bad entries.
 
 
-### CREATING THE AUTOHOTKEY SCRIPT
+### OPTIONAL: CREATING THE AUTOHOTKEY SCRIPT
 - Download and install autohotkey if you don't have it:
 - https://autohotkey.com/
 - Right click on the desktop and select "New" > "AutoHotKey Script"
@@ -88,7 +90,11 @@ r::SoundBeep, 1000, 500
 - HOWEVER, that will be very slow. So instead, you can download and use Taran's files, "keyremap.ini" and "FULL_extra_keyboard.ahk" and customize them to your own computer.
 
 
-- If you use Taran's keyremap.ini, be sure to "find and replace" all instances of this line:
+- If you use Zahuczky's keyremap.ini, be sure to "find and replace" all instances of this line:
+```
+device=HID\VID_0C45&PID_8603&REV_0200&MI_00
+```
+or if you use Taran's keyremap.ini this:
 ```
 device=HID\VID_046D&PID_C31C&REV_6400&MI_00
 ```
@@ -110,6 +116,10 @@ F23::return
 
 
 ### ADDITIONAL RECOURCES:
+> Taran's full repository with more stuff: 
+
+> https://github.com/TaranVH/2nd-keyboard
+
 > Kamaz's original post:
 
 > http://orbiter-forum.com/showthread.php?t=30829
