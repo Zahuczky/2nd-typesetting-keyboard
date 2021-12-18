@@ -83,7 +83,7 @@ r::SoundBeep, 1000, 500
 
 ### RECOMMENDED: USE ZAHUCZKY'S AUTOHOTKEY SCRIPT WITH PREMADE TYPESETTING FUNCTIONS AND BINDINGS
 - Download and install Autohotkey as detailed above.
-- Download Typesetting_Keyboard_by_Zahuczky.ahk from this repo.
+- Download "Typesetting_Keyboard_by_Zahuczky.ahk" from this repo.
 - Run it.
 - **KEEP IN MIND:**
 - The macros inside this script **heavily** rely on already made and installed Aegisub scripts and hotkey bindings!
@@ -97,7 +97,7 @@ r::SoundBeep, 1000, 500
 - Open a blank text file and type "QWERTY" using your primary keyboard in it to ensure that it works.
 - Now, type Q, W, E, or R on your secondary keyboard. Instead of text, you should recieve message boxes, tooltips, or a beep.
 - Now that you have that working, you can restart intercept.exe, and (A)dd all the remaining keys, using the method described above.
-- HOWEVER, that will be very slow. So instead, you can download and use Taran's files, "keyremap.ini" and "FULL_extra_keyboard.ahk" and customize them to your own computer.
+- HOWEVER, that will be very slow. So instead, you can download and use Zahuczky's or Taran's files, "keyremap.ini" and "Typesetting_Keyboard_by_Zahuczky.ahk" or "FULL_extra_keyboard.ahk" and customize them to your own computer.
 
 
 - If you use Zahuczky's keyremap.ini, be sure to "find and replace" all instances of this line:
