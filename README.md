@@ -81,6 +81,16 @@ r::SoundBeep, 1000, 500
 - Double click on the file to get it running.
 
 
+### RECOMMENDED: USE ZAHUCZKY'S AUTOHOTKEY SCRIPT WITH PREMADE TYPESETTING FUNCTIONS AND BINDINGS
+- Download and install Autohotkey as detailed above.
+- Download Typesetting_Keyboard_by_Zahuczky.ahk from this repo.
+- Run it.
+####KEEP IN MIND: 
+The macros inside this script **heavily** rely on already made and installed Aegisub scripts!
+More reading about dependencies, other key bindings can be found here: TBD
+For the usage of this Autohotkey scipt, reading and understanding this is **neccesary**.
+
+
 ### PUTTING IT ALL TOGETHER:
 
 - Make sure that Intercept.exe is running, with the filters applied. (press Y to apply them. Do not close the window.)
