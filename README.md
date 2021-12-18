@@ -33,7 +33,7 @@ install-interception.exe /install
 
 - (If you ever want to UNinstall interception, watch this): https://www.youtube.com/watch?v=Hn18vv--sFY
 
-### USING INTERCEPT.EXE -- (This is different from intercepTION!)
+### USING INTERCEPT.EXE (Tutorial) -- (This is different from intercepTION!)
 - Download Kamaz's intercept.exe zip from here:
 - http://octopup.org/img/code/interception/intercept.zip
 	(If it's no longer available from that location, I've already rehosted it in this folder.)
