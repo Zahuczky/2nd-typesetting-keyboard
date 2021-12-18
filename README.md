@@ -86,9 +86,9 @@ r::SoundBeep, 1000, 500
 - Download Typesetting_Keyboard_by_Zahuczky.ahk from this repo.
 - Run it.
 - **KEEP IN MIND:**
-The macros inside this script **heavily** rely on already made and installed Aegisub scripts and hotkey bindings!
-More reading about dependencies, other key bindings can be found here: TBD
-For the usage of this Autohotkey scipt, reading and understanding this is **neccesary**.
+- The macros inside this script **heavily** rely on already made and installed Aegisub scripts and hotkey bindings!
+- More reading about dependencies, other key bindings can be found here: TBD
+- sFor the usage of this Autohotkey scipt, reading and understanding this is **neccesary**.
 
 
 ### PUTTING IT ALL TOGETHER:
