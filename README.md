@@ -94,7 +94,7 @@ r::SoundBeep, 1000, 500
 **Bold** script name means it's available in [Dependency Control](https://github.com/TypesettingTools/DependencyControl), while colored means it's not, but it's linked.
 
 - Q: Sets Perspective from clip (Relies on [perspective.moon](https://github.com/Alendt/Aegisub-Scripts/blob/master/perspective.moon) macro set to Ctrl+G) {keycap done}
-- Y: Turns line into vectors (Relies on [Stroke Panel](https://github.com/zerefxx/Aegisub-macros) set to Alt+Y) (Y on QWERTZ, Z on QWERTY) {keycap done}
+- Y: Turns line into vectors (Relies on [Stroke Panel](https://github.com/zerefxx/Aegisub-macros/releases/tag/vSaveOld) set to Alt+Y) (Y on QWERTZ, Z on QWERTY) {keycap done}
 - B: Adds \blur0.8 (Relies on **HYDRA** set to Ctrl+G) {keycap done}
 - V: Adds \bord4 (Relies on **HYDRA** set to Ctrl+G) {keycap done}
 - N: Trim with Aegisub motion (Relies on **aegi-mo/trim** set to Alt+N) {keycap done}
