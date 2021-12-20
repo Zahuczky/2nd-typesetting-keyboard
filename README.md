@@ -1,6 +1,3 @@
---------------------------------------------------------------------
-IMPORTANT: This repo is under construction. Right now a lot of the stuff uploaded here isn't in a proper working order, or isn't as complete as the readme might imply. Keep that in mind.
---------------------------------------------------------------------
 # This fork only includes the Interception method from [TaranVH's original repository](https://github.com/TaranVH/2nd-keyboard), for the sake of creating a secondary [Aegisub](https://github.com/Ristellise/AegisubDC) typesetting keyboard.
 --------------------------------------------------------------------
 ## TaranVH's install steps for interception, intercept, and AutoHotKey:
@@ -89,8 +86,38 @@ r::SoundBeep, 1000, 500
 - Run it.
 - **KEEP IN MIND:**
 - The macros inside this script **heavily** rely on already made and installed Aegisub scripts and hotkey bindings!
-- More reading about dependencies, other key bindings can be found here: TBD
+- More reading about dependencies, other key bindings can be found below
 - For the usage of this Autohotkey script, reading and understanding this is **neccesary**.
+
+
+### Key bindings in Zahuczky's "Typesetting_Keyboard_by_Zahuczky.ahk" script
+**Bold** script name means it's available in [Dependency Control](https://github.com/TypesettingTools/DependencyControl), while colored means it's not, but it's linked.
+
+- Q: Sets Perspective from clip (Relies on [perspective.moon](https://github.com/Alendt/Aegisub-Scripts/blob/master/perspective.moon) macro set to Ctrl+G) {keycap done}
+- Y: Turns line into vectors (Relies on [Stroke Panel](https://github.com/zerefxx/Aegisub-macros) set to Alt+Y) (Y on QWERTZ, Z on QWERTY) {keycap done}
+- B: Adds \blur0.8 (Relies on **HYDRA** set to Ctrl+G) {keycap done}
+- V: Adds \bord4 (Relies on **HYDRA** set to Ctrl+G) {keycap done}
+- N: Trim with Aegisub motion (Relies on **aegi-mo/trim** set to Alt+N) {keycap done}
+- M: Open Aegisub motion (Relies on **aegi-mo/apply** set to Alt+M) {keycap done}
+- H: Encode clip with subtitles and audio (Relies on petzku/**encode clip**/clip with subtitles set to Ctrl+Alt+H) {keycap done}
+- J: Open Hyperdimensional relocator (Relies on **relocator** set to Ctrl+Alt+J) {keycap done}
+- P: Open Position shifter (Relies on [Position Shifter](https://github.com/tophf/ijitsuki/blob/master/Position%20shifter.moon) set to Ctrl+P) {keycap done}
+- S: Strip tags (Relies on Strip tags set to Ctrl+Alt+S) {keycap done}
+- D: Open Shake It (Relies on **shake it** set to Ctrl+Alt+D) {keycap done}
+- G: Gradient by character (Relies on **gradient by character** set ti Alt+G) {keycap done}
+- F: Remove Gradient by character (Relies on **gradient by character** set ti Ctrl+Alt+F) {keycap done}
+- T: Adds Shad Trick (Relies on **HYDRA** set to Ctrl+G) {keycap done}
+- K: Apply karaoke effect without furigana with log's [karaOK](https://github.com/logarrhythmic/karaOK) library (Relies on karaOK set to Ctrl+Alt+K) {keycap done}
+- Num 0: Opens Aegisub {TBD If already open, switch to that windows} {keycap done}
+- Num 1: Navigates to Aegisub recent files in file menu {keycap done}
+- Num 2: Opens Blender {TBD If already open, switch to that window} {keycap done}
+- Num 3: Opens Mocha {TBD If already open, switch to that window} {keycap done}
+- Num 4: Opens Illustrator {TBD If already open, switch to that window} {keycap done}
+- Num 5: Opens Photoshop {TBD If already open, switch to that window} {keycap done}
+
+TBD:
+Font collector
+
 
 
 ### PUTTING IT ALL TOGETHER:
@@ -99,7 +126,7 @@ r::SoundBeep, 1000, 500
 - Open a blank text file and type "QWERTY" using your primary keyboard in it to ensure that it works.
 - Now, type Q, W, E, or R on your secondary keyboard. Instead of text, you should recieve message boxes, tooltips, or a beep.
 - Now that you have that working, you can restart intercept.exe, and (A)dd all the remaining keys, using the method described above.
-- HOWEVER, that will be very slow. So instead, you can download and use Zahuczky's or Taran's files, "keyremap.ini" and "Typesetting_Keyboard_by_Zahuczky.ahk" or "FULL_extra_keyboard.ahk" and customize them to your own computer.
+- HOWEVER, that will be very slow. So instead, you can download and use Zahuczky's or Taran's files, "keyremap.ini"(Zahuczky's version contains the Hungarian `Í` key) and "Typesetting_Keyboard_by_Zahuczky.ahk"(Set up for typesetting) or "FULL_extra_keyboard.ahk"(blank) and customize them to your own computer.
 
 
 - If you use Zahuczky's keyremap.ini, be sure to "find and replace" all instances of this line:
