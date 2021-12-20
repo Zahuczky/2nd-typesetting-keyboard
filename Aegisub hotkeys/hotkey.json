@@ -110,6 +110,9 @@
 		]
 	},
 	"Default" : {
+		"" : [
+			"Ctrl-Shift-D"
+		],
 		"app/options" : [
 			"Alt-O"
 		],
@@ -128,17 +131,32 @@
 		"automation/lua/kara-templater/Apply karaoke template" : [
 			"Alt-K"
 		],
+		"automation/lua/l0.ShakeIt/Shake It/Shake Position" : [
+			"Ctrl-Alt-D"
+		],
+		"automation/lua/ln.kara-templater-mod/Apply karaoke template with modified script (no furigana)" : [
+			"Ctrl-Alt-K"
+		],
 		"automation/lua/lyger.GradientByChar/Gradient by character/Apply Gradient" : [
 			"Alt-G"
 		],
+		"automation/lua/lyger.GradientByChar/Gradient by character/Remove Gradient" : [
+			"Ctrl-Alt-F"
+		],
 		"automation/lua/perspective/Perspective/Transform for target org" : [
 			"Ctrl-Q"
+		],
+		"automation/lua/strip-tags/Strip tags" : [
+			"Ctrl-Alt-S"
 		],
 		"automation/lua/ua.HYDRA/HYDRA" : [
 			"Ctrl-G"
 		],
 		"automation/lua/ua.Relocator.lua" : [
 			"Ctrl-R"
+		],
+		"automation/lua/ua.Relocator/Hyperdimensional Relocator" : [
+			"Ctrl-Alt-J"
 		],
 		"edit/find_replace" : [
 			"Ctrl-H"
@@ -290,6 +308,9 @@
 		]
 	},
 	"Subtitle Grid" : {
+		"automation/lua/petzku.EncodeClip/Encode Clip/Clip with subtitles" : [
+			"Ctrl-Alt-H"
+		],
 		"subtitle/select/all" : [
 			"Ctrl-A"
 		],
