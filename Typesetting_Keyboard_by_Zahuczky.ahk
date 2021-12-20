@@ -106,7 +106,7 @@ q::Send, ^q
 w::
 e::
 r::
-t::
+t::Send, ^g{Tab 55}\1a{&}HFE{&}\3a{&}HFE\shad0.01{&}{Enter}
 y::Send, !y {Tab 8}{Space}{Tab 2}{Enter}
 u::
 i::
@@ -122,11 +122,11 @@ p::
 a::
 s::^!s
 d::^!d
-f::
-g::
+f::^!f
+g::!g
 h::^!h
 j::^!j
-K::
+K::^!k
 l::
 `;::
 ;for the above line, (semicolon) note that the ` is necessary as an escape character -- and that the syntax highlighting might get it wrong.
@@ -239,8 +239,8 @@ numpad0::run, C:\Users\zozic\OneDrive - Kormányzati Informatikai Fejlesztési �
 numpad1::Send, !f{Down 8}{Right}
 numpad2::run, C:\Program Files\Blender Foundation\Blender 3.0\blender-launcher.exe, C:\Program Files\Blender Foundation\Blender 3.0
 numpad3::run, C:\Program Files\BorisFX\Mocha Pro 2022\bin\mochapro.exe, C:\Program Files\BorisFX\Mocha Pro 2022\bin\mochapro.exe
-numpad4::
-numpad5::
+numpad4::run, C:\Program Files\Adobe\Adobe Illustrator 2021\Support Files\Contents\Windows\Illustrator.exe, C:\Program Files\Adobe\Adobe Illustrator 2021\Support Files\Contents\Windows
+numpad5::run, C:\Program Files\Adobe\Adobe Photoshop 2021\Photoshop.exe, C:\Program Files\Adobe\Adobe Photoshop 2021\Photoshop
 numpad6::
 numpad7::
 numpad8::
